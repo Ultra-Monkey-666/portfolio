@@ -1,13 +1,19 @@
 // Require images so webpack knows to include them
+/*
 const saitama1 = require('../public/saitama1.png');
 const saitama2 = require('../public/saitama2.png');
 const saitama3 = require('../public/saitama3.png');
+*/
+
+const arthur1 = require('../public/arthur1.jpg');
+const arthur2 = require('../public/arthur2.jpg');
+const arthur3 = require('../public/arthur3.jpg');
 
 // ===== IMAGE CAROUSEL JS =====
 const imageUrls = [
-  saitama1,
-  saitama2,
-  saitama3
+  arthur1,
+  arthur2,
+  arthur3
   // Add more image filenames here if needed
 ];
 
