@@ -7,12 +7,29 @@
   <style>
     /* ===== MODERN SAITAMA PORTFOLIO STYLES ===== */
     :root {
-      --bg: lightgrey;
+      background: linear-gradient(to left, red, yellow, green);
+
       --text: #2d2b3a;
       --accent: orange;
       --card-bg: #ffffff;
       --shadow: rgba(0, 0, 0, 0.1);
     }
+
+        .hero-card {
+      animation-name: spin;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
     * {
       margin: 0;
@@ -25,6 +42,8 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
+
+
     }
 
     header {
@@ -49,6 +68,7 @@
       padding: 2rem 1rem;
       max-width: 900px;
       margin: 0 auto;
+      flex-grow: 1;
     }
 
     .hero-card {
@@ -200,6 +220,7 @@
 
     /* ===== FOOTER ===== */
     footer {
+      background: linear-gradient(to right, purple 0%, violet 100%);
       text-align: center;
       padding: 1.5rem;
       color: black;
