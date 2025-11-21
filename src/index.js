@@ -59,6 +59,29 @@ function showImage(index) {
   });
 }
 
+//Stop spin
+
+  const heroID = document.getElementById("hero-card");
+  const stopSpin = document.getElementById("stop-spin")
+
+
+  stopSpin.addEventListener('click',() => {
+    const currentState = getComputedStyle(heroID).animationPlayState;
+
+
+    if(currentState === 'running'){
+      heroID.style.animationPlayState = 'paused';
+      stopSpin.textContent = '🟢Resume Spin?';
+    }
+    else{
+      heroID.style.animationPlayState = 'running';
+      stopSpin.textContent = '🛑Stop Spin?';
+    }
+
+  })
+
+
+
 // ===== CONTACT MODAL =====
 document.getElementById('contact-btn').addEventListener('click', () => {
   document.getElementById('contact-modal').style.display = 'flex';

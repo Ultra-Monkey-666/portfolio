@@ -15,27 +15,26 @@
       --shadow: rgba(0, 0, 0, 0.1);
     }
 
-        .hero-card {
-      animation-name: spin;
-      animation-duration: 30s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+    .hero-card {
+      animation: spin 15s linear infinite;
+
     }
 
     @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+
+  to {
     transform: rotate(360deg);
   }
-}
+  
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -175,6 +174,24 @@
       box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
     }
 
+        #stop-spin {
+      margin-top: 1.2rem;
+      padding: 0.6rem 1.4rem;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #stop-spin:hover {
+      background-color: #e03a47;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+    }
+
     /* ===== MODAL ===== */
     .modal {
       display: none;
@@ -237,7 +254,7 @@
   </header>
 
   <main>
-    <div class="hero-card">
+    <div class="hero-card" id="hero-card">
       <div class="image-carousel">
         <img id="hero-img" alt="Saitama from One Punch Man" />
         <div class="carousel-nav" id="carousel-nav"></div>
@@ -254,6 +271,7 @@
           <li>🏫 Prepare for School</li>
         </ul>
 
+        <button id="stop-spin">🛑Stop Spin?</button>
         <button id="contact-btn">📧 Contact Me?</button>
       </div>
     </div>
